@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ category }} Collection - Kanakadurga Selections</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>{{ category }} Collection</h1>
+    <nav>
+      <a href="/products/men">Men</a>
+      <a href="/products/women">Women</a>
+      <a href="/products/kids">Kids</a>
+      <a href="/products/oldage">Old-age</a>
+      <a href="/products/sarees">Sarees</a>
+      <a href="/products/jeans">Jeans</a>
+      <a href="/products/kurtis">Kurtis</a>
+      <a href="/products/nightwear">Nightwear</a>
+      <a href="/products/accessories">Accessories</a>
+    </nav>
+  </header>
+
+  <input type="text" id="searchBar" placeholder="Search products..." onkeyup="filterProducts()" />
+
+  <section class="products">
+    {% for product in products %}
+    <div class="product">
+      <img src="/static/{{ product.image }}" alt="{{ product.name }}">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <a class="whatsapp" href="https://wa.me/919948110822?text=I'm+interested+in+{{ product.name }}">Ask on WhatsApp</a>
+    </div>
+    {% endfor %}
+  </section>
+
+  <script>
+    function filterProducts() {
+      const input = document.getElementById('searchBar').value.toLowerCase();
+      const products = document.querySelectorAll('.product');
+
+      products.forEach(product => {
+        const text = product.textContent.toLowerCase();
+        product.style.display = text.includes(input) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
