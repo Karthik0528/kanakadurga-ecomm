@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Blue denim jeans",
+        "category": "Men",
+        "description": "its a blue shaded jeans with full comfort and skinny and perfect fit.",
+        "image": "static/uploads\\IMG_7026.webp"
+    },
+    {
+        "name": "light blue shirt",
+        "category": "Men",
+        "description": "its light coloured sky blue shirt",
+        "image": "static/uploads\\f1fc541e-9beb-911d-01cc-7726f5c89cfb_69fbdc45-4818-81ad-5dfc-7e2e1856b3cc_Cotton_20Cloud_20Striped_20Shirt_20-_201_b1053aa6-e229-4e40-830f1-b6cf4a8edc93_886071b4-e75d-426b-a331-746be68cc8bb.webp"
+    }
+]
